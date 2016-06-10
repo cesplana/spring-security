@@ -15,4 +15,21 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
+	<!-- Bean Declarations for the different Message sources -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:/bundle/messages</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+	
+	<!--
+        Bean declaration for the Language Session Localization
+    -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="en"/>
+    </bean>
+    
 </beans>

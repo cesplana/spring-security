@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
 </head>
 <body>
+	<h2>${title}</h2>
 	<h2>Welcome ${userName}!</h2>
 	<br/>
 	<b>Principal:</b> ${principal}
